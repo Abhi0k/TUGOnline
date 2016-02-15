@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>10c548c6-dea8-4d60-b4b6-f40c5f0d256f</ProjectGuid>
+    <ProjectGuid>{10C548C6-DEA8-4D60-B4B6-F40C5F0D256F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DataAccessLayer</RootNamespace>
@@ -30,24 +30,109 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CUSTOMER.cs">
+      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CUSTOMER_ADDRESS.cs">
+      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DELIVERY_STAFF.cs">
+      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MENU_MASTER.cs">
+      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_DETAILS.cs">
+      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_MASTER.cs">
+      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ORDER_STATUS.cs">
+      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAYMENT.cs">
+      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\GenericRepository.cs" />
+    <Compile Include="STORE.cs">
+      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SUBMENU_MASTER.cs">
+      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SUBMENU_VARIANT.cs">
+      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TOPPING.cs">
+      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TUGDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TUGDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TUGDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TUGDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TUGDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="UnitOfWork\UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="TUGDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TUGDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="TUGDataModel.edmx.diagram">
+      <DependentUpon>TUGDataModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TUGDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TUGDataModel.edmx</DependentUpon>
+      <LastGenOutput>TUGDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TUGDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TUGDataModel.edmx</DependentUpon>
+      <LastGenOutput>TUGDataModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -57,5 +142,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>

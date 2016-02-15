@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class Class1
+   public class Store
     {
+        public int StoreID { get; set; }
+        public string BranchName { get; set; }
+
+
     }
 }
