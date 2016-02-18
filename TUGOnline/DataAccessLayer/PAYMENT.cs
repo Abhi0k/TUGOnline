@@ -12,23 +12,23 @@ namespace DataAccessLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class PAYMENT
+    public partial class Payment
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PAYMENT()
+        public Payment()
         {
-            this.ORDER_MASTER = new HashSet<ORDER_MASTER>();
+            this.Orders = new HashSet<Order>();
         }
     
-        public int PAYMENT_ID { get; set; }
-        public string PAYMENT_TYPE { get; set; }
-        public string TRANSACTION_ID { get; set; }
-        public Nullable<decimal> AMOUNT { get; set; }
-        public Nullable<System.DateTime> PAYMENT_TIME { get; set; }
-        public Nullable<bool> ISSUCESS { get; set; }
-        public Nullable<bool> ISCOD { get; set; }
+        public int PaymentID { get; set; }
+        public string Type { get; set; }
+        public string TransactionID { get; set; }
+        public Nullable<decimal> Amount { get; set; }
+        public Nullable<System.DateTime> Time { get; set; }
+        public Nullable<bool> IsSucces { get; set; }
+        public Nullable<bool> IsCOD { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ORDER_MASTER> ORDER_MASTER { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

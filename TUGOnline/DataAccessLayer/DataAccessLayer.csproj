@@ -46,93 +46,100 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CUSTOMER.cs">
-      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    <Compile Include="Customer.cs">
+      <DependentUpon>TUGModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CUSTOMER_ADDRESS.cs">
-      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    <Compile Include="CustomerAddress.cs">
+      <DependentUpon>TUGModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DELIVERY_STAFF.cs">
-      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    <Compile Include="DeliveryStaff.cs">
+      <DependentUpon>TUGModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="MENU_MASTER.cs">
-      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    <Compile Include="Order.cs">
+      <DependentUpon>TUGModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ORDER_DETAILS.cs">
-      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    <Compile Include="OrderDetail.cs">
+      <DependentUpon>TUGModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ORDER_MASTER.cs">
-      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    <Compile Include="OrderStatu.cs">
+      <DependentUpon>TUGModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ORDER_STATUS.cs">
-      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    <Compile Include="Payment.cs">
+      <DependentUpon>TUGModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="PAYMENT.cs">
-      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    <Compile Include="Product.cs">
+      <DependentUpon>TUGModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\GenericRepository.cs" />
-    <Compile Include="STORE.cs">
-      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    <Compile Include="Repository\ProductRepository.cs" />
+    <Compile Include="Store.cs">
+      <DependentUpon>TUGModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="SUBMENU_MASTER.cs">
-      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    <Compile Include="SubProduct.cs">
+      <DependentUpon>TUGModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="SUBMENU_VARIANT.cs">
-      <DependentUpon>TUGDataModel.tt</DependentUpon>
+    <Compile Include="Topping.cs">
+      <DependentUpon>TUGModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TOPPING.cs">
-      <DependentUpon>TUGDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TUGDataModel.Context.cs">
+    <Compile Include="TUGModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TUGDataModel.Context.tt</DependentUpon>
+      <DependentUpon>TUGModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="TUGDataModel.cs">
+    <Compile Include="TUGModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TUGDataModel.tt</DependentUpon>
+      <DependentUpon>TUGModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TUGDataModel.Designer.cs">
+    <Compile Include="TUGModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TUGDataModel.edmx</DependentUpon>
+      <DependentUpon>TUGModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="TUGDataModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TUGDataModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
+    <Compile Include="Variant.cs">
+      <DependentUpon>TUGModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <None Include="TUGDataModel.edmx.diagram">
-      <DependentUpon>TUGDataModel.edmx</DependentUpon>
+    <EntityDeploy Include="TUGModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TUGModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TUGModel.edmx.diagram">
+      <DependentUpon>TUGModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TUGDataModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TUGDataModel.edmx</DependentUpon>
-      <LastGenOutput>TUGDataModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="TUGDataModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TUGDataModel.edmx</DependentUpon>
-      <LastGenOutput>TUGDataModel.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{aa5e5845-0892-4a56-a7fc-d978dd6cbbcf}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TUGModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TUGModel.edmx</DependentUpon>
+      <LastGenOutput>TUGModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TUGModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TUGModel.edmx</DependentUpon>
+      <LastGenOutput>TUGModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

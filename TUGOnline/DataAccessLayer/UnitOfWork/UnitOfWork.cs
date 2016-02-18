@@ -15,26 +15,26 @@ namespace DataAccessLayer.UnitOfWork
     {
         #region Private member variables...
 
-        private TUGEntities _context = null;
-        private GenericRepository<CUSTOMER> _customerRepository;
-        private GenericRepository<CUSTOMER_ADDRESS> _custAddressRepository;
-        private GenericRepository<DELIVERY_STAFF> _deliveryStaffRepository;
-        private GenericRepository<MENU_MASTER> _menuRepository;
-        private GenericRepository<ORDER_DETAILS> _orderDetailRepository;
-        private GenericRepository<ORDER_MASTER> _orderRepository;
-        private GenericRepository<ORDER_STATUS> _orderStatusRepository;
-        private GenericRepository<PAYMENT> _paymentRepository;
-        private GenericRepository<STORE> _storeRepository;
-        private GenericRepository<SUBMENU_MASTER> _subMenuRepository;
-        private GenericRepository<SUBMENU_VARIANT> _variantRepository;
-        private GenericRepository<TOPPING> _toppingRepository;
+        private TUGDBEntities _context = null;
+        private GenericRepository<Customer> _customerRepository;
+        private GenericRepository<CustomerAddress> _custAddressRepository;
+        private GenericRepository<DeliveryStaff> _deliveryStaffRepository;
+        private GenericRepository<Product> _productRepository;
+        private GenericRepository<OrderDetail> _orderDetailRepository;
+        private GenericRepository<Order> _orderRepository;
+        private GenericRepository<OrderStatu> _orderStatusRepository;
+        private GenericRepository<Payment> _paymentRepository;
+        private GenericRepository<Store> _storeRepository;
+        private GenericRepository<SubProduct> _subProductRepository;
+        private GenericRepository<Variant> _variantRepository;
+        private GenericRepository<Topping> _toppingRepository;
         
 
         #endregion
 
         public UnitOfWork()
         {
-            _context = new TUGEntities();
+            _context = new TUGDBEntities();
         }
 
         #region Public Repository Creation properties...
@@ -42,12 +42,12 @@ namespace DataAccessLayer.UnitOfWork
         /// <summary>
         /// Get/Set Property for CUSTOMER repository.
         /// </summary>
-        public GenericRepository<CUSTOMER> CustomerRepository
+        public GenericRepository<Customer> CustomerRepository
         {
             get
             {
                 if (this._customerRepository == null)
-                    this._customerRepository = new GenericRepository<CUSTOMER>(_context);
+                    this._customerRepository = new GenericRepository<Customer>(_context);
                 return _customerRepository;
             }
         }
@@ -55,12 +55,12 @@ namespace DataAccessLayer.UnitOfWork
         /// <summary>
         /// Get/Set Property for CUSTOMER_ADDRESS repository.
         /// </summary>
-        public GenericRepository<CUSTOMER_ADDRESS> AddressRepository
+        public GenericRepository<CustomerAddress> AddressRepository
         {
             get
             {
                 if (this._custAddressRepository == null)
-                    this._custAddressRepository = new GenericRepository<CUSTOMER_ADDRESS>(_context);
+                    this._custAddressRepository = new GenericRepository<CustomerAddress>(_context);
                 return _custAddressRepository;
             }
         }
@@ -68,50 +68,50 @@ namespace DataAccessLayer.UnitOfWork
         /// <summary>
         /// Get/Set Property for DELIVERY_STAFF repository.
         /// </summary>
-        public GenericRepository<DELIVERY_STAFF> DeliveryStaffRepository
+        public GenericRepository<DeliveryStaff> DeliveryStaffRepository
         {
             get
             {
                 if (this._deliveryStaffRepository == null)
-                    this._deliveryStaffRepository = new GenericRepository<DELIVERY_STAFF>(_context);
+                    this._deliveryStaffRepository = new GenericRepository<DeliveryStaff>(_context);
                 return _deliveryStaffRepository;
             }
         }
 
         /// <summary>
-        /// Get/Set Property for MENU MASTER repository.
+        /// Get/Set Property for Product repository.
         /// </summary>
-        public GenericRepository<MENU_MASTER> MenuRepository
+        public GenericRepository<Product> ProductRepository
         {
             get
             {
-                if (this._menuRepository == null)
-                    this._menuRepository = new GenericRepository<MENU_MASTER>(_context);
-                return _menuRepository;
+                if (this._productRepository == null)
+                    this._productRepository = new GenericRepository<Product>(_context);
+                return _productRepository;
             }
         }
 
         /// <summary>
         /// Get/Set Property for order Details repository.
         /// </summary>
-        public GenericRepository<ORDER_DETAILS> OrderDetailRepository
+        public GenericRepository<OrderDetail> OrderDetailRepository
         {
             get
             {
                 if (this._orderDetailRepository == null)
-                    this._orderDetailRepository = new GenericRepository<ORDER_DETAILS>(_context);
+                    this._orderDetailRepository = new GenericRepository<OrderDetail>(_context);
                 return _orderDetailRepository;
             }
         }
         /// <summary>
         /// Get/Set Property for order  repository.
         /// </summary>
-        public GenericRepository<ORDER_MASTER> OrderRepository
+        public GenericRepository<Order> OrderRepository
         {
             get
             {
                 if (this._orderRepository == null)
-                    this._orderRepository = new GenericRepository<ORDER_MASTER>(_context);
+                    this._orderRepository = new GenericRepository<Order>(_context);
                 return _orderRepository;
             }
         }
@@ -119,24 +119,24 @@ namespace DataAccessLayer.UnitOfWork
         /// <summary>
         /// Get/Set Property for order status repository.
         /// </summary>
-        public GenericRepository<ORDER_STATUS> OrderStatusRepository
+        public GenericRepository<OrderStatu> OrderStatusRepository
         {
             get
             {
                 if (this._orderStatusRepository == null)
-                    this._orderStatusRepository = new GenericRepository<ORDER_STATUS>(_context);
+                    this._orderStatusRepository = new GenericRepository<OrderStatu>(_context);
                 return _orderStatusRepository;
             }
         }
         /// <summary>
         /// Get/Set Property for Payment repository.
         /// </summary>
-        public GenericRepository<PAYMENT> PaymentRepository
+        public GenericRepository<Payment> PaymentRepository
         {
             get
             {
                 if (this._paymentRepository == null)
-                    this._paymentRepository = new GenericRepository<PAYMENT>(_context);
+                    this._paymentRepository = new GenericRepository<Payment>(_context);
                 return _paymentRepository;
             }
         }
@@ -145,38 +145,38 @@ namespace DataAccessLayer.UnitOfWork
         /// <summary>
         /// Get/Set Property for Store repository.
         /// </summary>
-        public GenericRepository<STORE> StoreRepository
+        public GenericRepository<Store> StoreRepository
         {
             get
             {
                 if (this._storeRepository == null)
-                    this._storeRepository = new GenericRepository<STORE>(_context);
+                    this._storeRepository = new GenericRepository<Store>(_context);
                 return _storeRepository;
             }
         }
 
         /// <summary>
-        /// Get/Set Property for Submenu Master repository.
+        /// Get/Set Property for SubProduct repository.
         /// </summary>
-        public GenericRepository<SUBMENU_MASTER> SubMenuRepository
+        public GenericRepository<SubProduct> SubProductRepository
         {
             get
             {
-                if (this._subMenuRepository == null)
-                    this._subMenuRepository = new GenericRepository<SUBMENU_MASTER>(_context);
-                return _subMenuRepository;
+                if (this._subProductRepository == null)
+                    this._subProductRepository = new GenericRepository<SubProduct>(_context);
+                return _subProductRepository;
             }
         }
 
         /// <summary>
-        /// Get/Set Property for SubMenu Variant repository.
+        /// Get/Set Property for  Variant repository.
         /// </summary>
-        public GenericRepository<SUBMENU_VARIANT> VariantRepository
+        public GenericRepository<Variant> VariantRepository
         {
             get
             {
                 if (this._variantRepository == null)
-                    this._variantRepository = new GenericRepository<SUBMENU_VARIANT>(_context);
+                    this._variantRepository = new GenericRepository<Variant>(_context);
                 return _variantRepository;
             }
         }
@@ -184,12 +184,12 @@ namespace DataAccessLayer.UnitOfWork
         /// <summary>
         /// Get/Set Property for order Details repository.
         /// </summary>
-        public GenericRepository<TOPPING> ToppingRepository
+        public GenericRepository<Topping> ToppingRepository
         {
             get
             {
                 if (this._toppingRepository == null)
-                    this._toppingRepository = new GenericRepository<TOPPING>(_context);
+                    this._toppingRepository = new GenericRepository<Topping>(_context);
                 return _toppingRepository;
             }
         }

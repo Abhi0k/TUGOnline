@@ -12,20 +12,20 @@ namespace DataAccessLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class TOPPING
+    public partial class Topping
     {
-        public int TOPPING_ID { get; set; }
-        public int MENU_ID { get; set; }
-        public string TOPPING_NAME { get; set; }
-        public string VARIANT_DESCRIPTION { get; set; }
-        public string IMAGE_PATH { get; set; }
-        public Nullable<decimal> PRICE { get; set; }
-        public Nullable<System.DateTime> CREATED_DATE { get; set; }
-        public string CREATED_BY { get; set; }
-        public Nullable<System.DateTime> LASTMODIFIED_DATE { get; set; }
-        public string LASTMODIFIED_BY { get; set; }
-        public Nullable<bool> ISACTIVE { get; set; }
+        public int ToppingID { get; set; }
+        public int ProductID { get; set; }
+        public string Name { get; set; }
+        public string ToppingDes { get; set; }
+        public string ToppingImg { get; set; }
+        public Nullable<decimal> Price { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
+        public string CreatedBy { get; set; }
+        public Nullable<System.DateTime> LastModifyDate { get; set; }
+        public string LastModifyBy { get; set; }
+        public Nullable<bool> IsActive { get; set; }
     
-        public virtual MENU_MASTER MENU_MASTER { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

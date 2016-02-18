@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1f8c84fd894f4c909f186771fbdc7930" Name="Diagram1">
+        <EntityTypeShape EntityType="TUGDBModel.Customer" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUGDBModel.CustomerAddress" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUGDBModel.DeliveryStaff" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUGDBModel.OrderDetail" Width="1.5" PointX="7.5" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUGDBModel.Order" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUGDBModel.OrderStatu" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUGDBModel.Payment" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUGDBModel.Product" Width="1.5" PointX="3" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUGDBModel.Store" Width="1.5" PointX="3" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUGDBModel.SubProduct" Width="1.5" PointX="5.25" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUGDBModel.Topping" Width="1.5" PointX="5.25" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUGDBModel.Variant" Width="1.5" PointX="5.25" PointY="13.375" IsExpanded="true" />
+        <AssociationConnector Association="TUGDBModel.FK__CustomerA__Custo__0519C6AF" ManuallyRouted="false" />
+        <AssociationConnector Association="TUGDBModel.FK__Orders__Customer__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="TUGDBModel.FK__Orders__AddressI__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="TUGDBModel.FK__Orders__PersonID__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="TUGDBModel.FK__OrderDeta__Order__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="TUGDBModel.FK__OrderDeta__SubPr__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="TUGDBModel.FK__OrderDeta__Varia__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="TUGDBModel.FK__Orders__PaymentI__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="TUGDBModel.FK__Orders__StatusID__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="TUGDBModel.FK__Orders__StoreID__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="TUGDBModel.FK__SubProduc__Produ__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="TUGDBModel.FK__Toppings__Produc__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="TUGDBModel.FK__Variants__SubPro__173876EA" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

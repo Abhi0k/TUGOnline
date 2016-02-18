@@ -12,18 +12,18 @@ namespace DataAccessLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class STORE
+    public partial class Store
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public STORE()
+        public Store()
         {
-            this.ORDER_MASTER = new HashSet<ORDER_MASTER>();
+            this.Orders = new HashSet<Order>();
         }
     
-        public int STORE_ID { get; set; }
-        public string STORE_NAME { get; set; }
+        public int StoreID { get; set; }
+        public string StoreBranch { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ORDER_MASTER> ORDER_MASTER { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

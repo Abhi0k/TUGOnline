@@ -12,29 +12,29 @@ namespace DataAccessLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class CUSTOMER
+    public partial class Customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CUSTOMER()
+        public Customer()
         {
-            this.CUSTOMER_ADDRESS = new HashSet<CUSTOMER_ADDRESS>();
-            this.ORDER_MASTER = new HashSet<ORDER_MASTER>();
+            this.CustomerAddresses = new HashSet<CustomerAddress>();
+            this.Orders = new HashSet<Order>();
         }
     
-        public string CUST_ID { get; set; }
-        public string PASSWORD { get; set; }
-        public string FIRSTNAME { get; set; }
-        public string LASTNAME { get; set; }
+        public string CustomerID { get; set; }
+        public string Password { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public Nullable<System.DateTime> DOB { get; set; }
-        public string EMAIL_ID { get; set; }
-        public string MOBILE_NUMBER { get; set; }
-        public string CITY { get; set; }
-        public string GENDER { get; set; }
-        public bool ISACTIVE { get; set; }
+        public string EmailID { get; set; }
+        public string MobileNumber { get; set; }
+        public string City { get; set; }
+        public string Gender { get; set; }
+        public bool IsActive { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CUSTOMER_ADDRESS> CUSTOMER_ADDRESS { get; set; }
+        public virtual ICollection<CustomerAddress> CustomerAddresses { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ORDER_MASTER> ORDER_MASTER { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

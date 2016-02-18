@@ -17,7 +17,7 @@ namespace DataAccessLayer.Repository
     public class GenericRepository<TEntity> where TEntity : class
     {
         #region Private member variables...
-        internal TUGEntities Context;
+        internal TUGDBEntities Context;
         internal DbSet<TEntity> DbSet;
         #endregion
 
@@ -26,7 +26,7 @@ namespace DataAccessLayer.Repository
         /// Public Constructor,initializes privately declared local variables.
         /// </summary>
         /// <param name="context"></param>
-        public GenericRepository(TUGEntities context)
+        public GenericRepository(TUGDBEntities context)
         {
             this.Context = context;
             this.DbSet = context.Set<TEntity>();

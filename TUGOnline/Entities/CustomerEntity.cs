@@ -20,5 +20,7 @@ namespace Entities
         public string Gender { get; set; }
         public bool IsActive { get; set; }
 
+
+
     }
 }
