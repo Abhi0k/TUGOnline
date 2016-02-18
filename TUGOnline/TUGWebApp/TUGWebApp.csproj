@@ -66,17 +66,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CSS\bootstrap.css" />
-    <Content Include="CSS\bootstrap.min.css" />
+    <Content Include="app.js" />
+    <Content Include="Home\Controllers\customerController.js" />
+    <Content Include="Home\Views\customerHome.html" />
+    <Content Include="Shared\CSS\bootstrap.css" />
+    <Content Include="Shared\CSS\bootstrap.min.css" />
     <Content Include="Index.html" />
     <Content Include="packages.config" />
-    <Content Include="Scripts\angular-mocks.js" />
-    <Content Include="Scripts\angular-route.js" />
-    <Content Include="Scripts\angular-route.min.js" />
-    <Content Include="Scripts\angular.js" />
-    <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Shared\Scripts\jquery.min.js" />
+    <Content Include="Shared\Scripts\angular-mocks.js" />
+    <Content Include="Shared\Scripts\angular-route.js" />
+    <Content Include="Shared\Scripts\angular-route.min.js" />
+    <Content Include="Shared\Scripts\angular.js" />
+    <Content Include="Shared\Scripts\angular.min.js" />
+    <Content Include="Shared\Scripts\angular.min.js.map" />
+    <Content Include="Shared\Scripts\angular-route.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -85,15 +89,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Shared\Scripts\bootstrap.js" />
+    <Content Include="Shared\Scripts\bootstrap.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="JS\" />
+    <Folder Include="Home\Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
