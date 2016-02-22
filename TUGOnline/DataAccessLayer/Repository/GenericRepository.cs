@@ -80,7 +80,7 @@ namespace DataAccessLayer.Repository
         /// <param name="entityToDelete"></param>
         public virtual void Delete(TEntity entityToDelete)
         {
-            if (Context.Entry(entityToDelete).State == EntityState.Detached)
+            if (Context.Entry(entityToDelete).State == System.Data.Entity.EntityState.Detached)
             {
                 DbSet.Attach(entityToDelete);
             }
@@ -94,7 +94,7 @@ namespace DataAccessLayer.Repository
         public virtual void Update(TEntity entityToUpdate)
         {
             DbSet.Attach(entityToUpdate);
-            Context.Entry(entityToUpdate).State = EntityState.Modified;
+            Context.Entry(entityToUpdate).State = System.Data.Entity.EntityState.Modified;
         }
 
         /// <summary>
