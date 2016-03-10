@@ -3,16 +3,78 @@
     padding-bottom: 15px;
 }
 
-.carousel {
-    height:300px !important;
-}
-
 .tile {
     min-height:100px;
 }
 
 .margin-top-2{
     margin-top:2%;
+}
+
+#section0,
+#section0 .fp-slide,
+#section0 .fp-tableCell{
+    height: auto !important;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  max-height: 250px;    /* Set slide height here */
+  min-width:100%;
+}
+
+.left{
+    max-height:250px;
+}
+
+.carousel .fp-tableCell{
+    vertical-align:top;
+}
+
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+
+.right{
+    max-height:250px;
 }
 
 .title-wrap{
@@ -37,3 +99,21 @@
     padding: 0 15px;
 }
 
+.thumbnail {
+    position:relative;
+    overflow:hidden;
+}
+ 
+.caption {
+    position:absolute;
+    top:0;
+    right:0;
+    background:rgba(66, 139, 202, 0.75);
+    width:100%;
+    height:100%;
+    padding:2%;
+    display: none;
+    text-align:center;
+    color:#fff !important;
+    z-index:2;
+}
