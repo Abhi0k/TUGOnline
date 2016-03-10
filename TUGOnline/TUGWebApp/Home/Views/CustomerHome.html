@@ -1,32 +1,5 @@
-﻿<div ng-controller="customerHomeController">
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">The Urban Gumti</a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="fa fa-shopping-cart fa-2x"></span></a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-user fa-2x"></span> <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Profile</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Logout</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
+﻿<div ng-controller="customerController">
+   
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -78,10 +51,12 @@
                     <div class="col-lg-offset-2">
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                             <div class="tile">
-                                <img src="../../Shared/Images/resized_tug_burger_menu_item.jpg" width="100%" height="100%" />
-                                <div class="carousel-caption">
-                                    <h3>Burgers</h3>
-                                </div>
+                                <a href="#menuItem">
+                                    <img src="../../Shared/Images/resized_tug_burger_menu_item.jpg" width="100%" height="100%" />
+                                    <div class="carousel-caption">
+                                        <h3>Burgers</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -165,4 +140,19 @@
             </div>
         </div>
     </div>
+    <!--<div>From service</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-offset-2 col-md-offset-2">
+                <div  ng-repeat="item in menuItems" class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                    <div class="tile">
+                        <img src="../../Shared/Images/resized_tug_shakes_menu_item.jpg" width="100%" height="100%" />
+                        <div class="carousel-caption">
+                            <h3>{{item.ProductName}}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
 </div>

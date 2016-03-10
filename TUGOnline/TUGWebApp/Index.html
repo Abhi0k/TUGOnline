@@ -2,21 +2,52 @@
 <html>
 <head>
     <title>The Urban Gumti</title>
-	<meta charset="utf-8" />
-    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="Shared/CSS/jquery.fullPage.css" />
     <link rel="stylesheet" href="Shared/CSS/bootstrap.min.css" />
     <link rel="stylesheet" href="Shared/CSS/FontAwesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="Shared/CSS/Custom.css" />
 </head>
 <body>
     <div ng-app="TUGApp">
+        <nav class="navbar navbar-inverse nav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">The Urban Gumti</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="fa fa-shopping-cart fa-2x"></span></a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-user fa-2x"></span> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Profile</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <div ng-view></div>
     </div>
     <script src="Shared/Scripts/jquery.min.js"></script>
     <script src="Shared/Scripts/angular.min.js"></script>
     <script src="Shared/Scripts/angular-route.min.js"></script>
     <script src="app.js"></script>
+    <script src="Home/Services/customerHomeMenuService.js"></script>
     <script src="Home/Controllers/customerController.js"></script>
+    <script src="Home/Controllers/menuItemController.js"></script>
     <script src="Shared/Scripts/bootstrap.min.js"></script>
+    <script src="Shared/Scripts/custom.js"></script>
 </body>
 </html>

@@ -68,7 +68,10 @@
   <ItemGroup>
     <Content Include="app.js" />
     <Content Include="Home\Controllers\customerController.js" />
+    <Content Include="Home\Controllers\menuItemController.js" />
+    <Content Include="Home\Services\customerHomeMenuService.js" />
     <Content Include="Home\Views\customerHome.html" />
+    <Content Include="Home\Views\menuItems.html" />
     <Content Include="Shared\CSS\bootstrap.css" />
     <Content Include="Shared\CSS\bootstrap.min.css" />
     <Content Include="Index.html" />
@@ -77,6 +80,7 @@
     <Content Include="Shared\CSS\FontAwesome\css\font-awesome.css" />
     <Content Include="Shared\CSS\FontAwesome\css\font-awesome.min.css" />
     <Content Include="Shared\CSS\FontAwesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Shared\CSS\jquery.fullPage.css" />
     <Content Include="Shared\Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Shared\Images\beverages1.jpg" />
     <Content Include="Shared\Images\beverages2.jpg" />
@@ -95,6 +99,8 @@
     <Content Include="Shared\Images\resized_tug_sub_menu_item.jpg" />
     <Content Include="Shared\Images\resized_tug_tea_menu_item.jpg" />
     <Content Include="Shared\Images\resized_tug_toastie_menu_item.jpg" />
+    <Content Include="Shared\Scripts\custom.js" />
+    <Content Include="Shared\Scripts\jquery.fullPage.js" />
     <Content Include="Shared\Scripts\jquery.min.js" />
     <Content Include="Shared\Scripts\angular-mocks.js" />
     <Content Include="Shared\Scripts\angular-route.js" />
@@ -148,14 +154,13 @@
   <ItemGroup>
     <Content Include="Shared\Scripts\bootstrap.js" />
     <Content Include="Shared\Scripts\bootstrap.min.js" />
+    <Content Include="Shared\Scripts\jquery.slimscroll.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Home\Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
       <Project>{ff32f257-c37b-411d-84e9-94eb24eaf203}</Project>
